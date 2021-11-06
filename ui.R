@@ -15,6 +15,7 @@ library(shinythemes)
 library(yorkr)
 library(ggthemes)
 library(plotly)
+library(stringr)
 
 
 

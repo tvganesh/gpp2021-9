@@ -17,7 +17,7 @@ library(rpart.plot)
 library(ggthemes)
 library(plotly)
 library(shinycssloaders)
-
+library(stringr)
 # Source files
 
 source("definitions.R")

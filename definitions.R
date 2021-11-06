@@ -42,7 +42,13 @@ matchFuncs <- c("Match Batting Scorecard",
                    "Bowling Wicket Runs",
                    "Bowling Wicket Match",
                    "Bowler vs Batsmen",
-                   "Match Worm Graph")
+                   "Match Worm Graph",
+                   "Match worm wicket Graph",
+                   "Team Runs Across 20 overs",
+                   "Team Strike rate Across 20 overs",
+                   "Team Wickets Across 20 overs",
+                   "Team ER Across 20 overs"
+                )
 
 
 # Functions to analyze IPL matches
@@ -54,6 +60,10 @@ matches2TeamsFuncs <- c("Team Batsmen Batting Partnerships All Matches",
                             "Team Bowler vs Batsmen All Matches",
                             "Team Bowlers Wicket Kind All Matches",
                             "Team Bowler Wicket Runs All Matches",
+                             "Team-vs-team Runs Across 20 overs",
+                             "Team-vs-team Strike rate Across 20 overs",
+                             "Team-vs-team Wickets Across 20 overs",
+                              "Team-vs-team ER Across 20 overs",
                             "Win Loss Head-to-head All Matches")
 
 # Functions to analyze IPL teams' overall performance
