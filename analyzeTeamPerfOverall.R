@@ -150,7 +150,19 @@ analyzeTeamPerfOverall <- function(matches,matchFunc,team,rankV,plotOrTable2,rep
     } else if (matchFunc == "Team Bowler Wicket Kind Overall"){
         teamBowlingWicketKindAllOppnAllMatches(matchesDF,team,"All",plot=plotOrTable2)
 
-    } else if (matchFunc == "Win Loss Team vs All Opposition"){
+    } else if (matchFunc == "Team Mean Runs Overall"){
+      teamRunsAcrossOversAllOppnAllMatches(matchesDF,team,plot=plotOrTable2)
+    } else if (matchFunc == "Team Mean Strike Rate Overall"){
+      teamSRAcrossOversAllOppnAllMatches(matchesDF,team,plot=plotOrTable2)
+    } else if (matchFunc == "Team Mean Wickets Overall"){
+      teamWicketsAcrossOversAllOppnAllMatches(matchesDF,team,plot=plotOrTable2)
+    } else if (matchFunc == "Team Mean Economy Rate Overall"){
+      teamERAcrossOversAllOppnAllMatches(matchesDF,team,plot=plotOrTable2)
+    }
+
+
+
+  else if (matchFunc == "Win Loss Team vs All Opposition"){
       plotWinLossTeamVsAllTeams(team,dir1,dateRange, plot=plotOrTable2)
 
     }

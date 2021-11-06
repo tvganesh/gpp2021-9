@@ -63,7 +63,7 @@ matches2TeamsFuncs <- c("Team Batsmen Batting Partnerships All Matches",
                              "Team-vs-team Runs Across 20 overs",
                              "Team-vs-team Strike rate Across 20 overs",
                              "Team-vs-team Wickets Across 20 overs",
-                              "Team-vs-team ER Across 20 overs",
+                             "Team-vs-team ER Across 20 overs",
                             "Win Loss Head-to-head All Matches")
 
 # Functions to analyze IPL teams' overall performance
@@ -73,6 +73,10 @@ teamOverallPerfFunc <- c("Team Batsmen Partnerships Overall",
                            'Team Bowler vs Batsmen Overall',
                            "Team Bowling Scorecard Overall",
                            "Team Bowler Wicket Kind Overall",
+                           "Team Mean Runs Overall",
+                           "Team Mean Strike Rate Overall",
+                           "Team Mean Wickets Overall",
+                           "Team Mean Economy Rate Overall",
                            "Win Loss Team vs All Opposition")
 
 
