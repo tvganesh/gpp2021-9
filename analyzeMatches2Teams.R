@@ -143,8 +143,16 @@ analyzeMatches2Teams <- function(match2,matchFunc,plotOrTable1,repType, team,opp
         teamBowlersWicketKindOppnAllMatches(matchesDF,team,opposition,plot=plotOrTable1)
     } else if (matchFunc == "Team Bowler Wicket Runs All Matches"){
         teamBowlersWicketRunsOppnAllMatches(matchesDF,team,opposition,plot=plotOrTable1)
+    } else if (matchFunc == "Team-vs-team Runs Across 20 overs"){
+        teamRunsAcrossOversOppnAllMatches(matchesDF,team,opposition,plot=plotOrTable1)
+    } else if (matchFunc == "Team-vs-team Strike rate Across 20 overs"){
+        teamSRAcrossOversOppnAllMatches(matchesDF,team,opposition,plot=plotOrTable1)
+    } else if (matchFunc == "Team-vs-team Wickets Across 20 overs"){
+        teamWicketsAcrossOversOppnAllMatches(matchesDF,team,opposition,plot=plotOrTable1)
+    } else if (matchFunc == "Team-vs-team ER Across 20 overs"){
+        teamERAcrossOversOppnAllMatches(matchesDF,team,opposition,plot=plotOrTable1)
     } else if (matchFunc == "Win Loss Head-to-head All Matches"){
-        plotWinLossBetweenTeams(team,opposition,dir1,dateRange, plot=plotOrTable1)
+       plotWinLossBetweenTeams(team,opposition,dir1,dateRange, plot=plotOrTable1)
     }
 
 

@@ -107,6 +107,16 @@ analyzeMatches <- function(match,matchFunc,plotOrTable,team,opposition,t20type) 
         teamBowlersVsBatsmenMatch(matchDF,team,opposition, plot=plotOrTable)
     } else if (matchFunc == "Match Worm Graph"){
         matchWormGraph(matchDF,team,opposition,plot=plotOrTable)
+    }  else if (matchFunc == "Match Worm Graph with Wickets"){
+        matchWormGraph(matchDF,team,opposition,plot=plotOrTable)
+    }  else if (matchFunc == "Team Runs Across 20 overs"){
+        teamRunsAcrossOvers(matchDF,team,opposition,plot=plotOrTable)
+    }  else if (matchFunc == "Team Strike rate Across 20 overs"){
+        teamSRAcrossOvers(matchDF,team,opposition,plot=plotOrTable)
+    }  else if (matchFunc == "Team Wickets Across 20 overs"){
+        teamWicketsAcrossOvers(matchDF,team,opposition,plot=plotOrTable)
+    } else if (matchFunc == "Team ER Across 20 overs"){
+        teamERAcrossOvers(matchDF,team,opposition,plot=plotOrTable)
     }
 
 
