@@ -18,7 +18,6 @@ library(plotly)
 library(stringr)
 
 
-
 shinyUI(fluidPage(theme = shinytheme("readable"),
                   ## Title and headings
                   titlePanel("GooglyPlusPlus 2021!!!"),

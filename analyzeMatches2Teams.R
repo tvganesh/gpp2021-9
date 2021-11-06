@@ -143,14 +143,22 @@ analyzeMatches2Teams <- function(match2,matchFunc,plotOrTable1,repType, team,opp
         teamBowlersWicketKindOppnAllMatches(matchesDF,team,opposition,plot=plotOrTable1)
     } else if (matchFunc == "Team Bowler Wicket Runs All Matches"){
         teamBowlersWicketRunsOppnAllMatches(matchesDF,team,opposition,plot=plotOrTable1)
-    } else if (matchFunc == "Team-vs-team Runs Across 20 overs"){
+    } else if (matchFunc == "Team-vs-team Runs across 20 overs"){
         teamRunsAcrossOversOppnAllMatches(matchesDF,team,opposition,plot=plotOrTable1)
-    } else if (matchFunc == "Team-vs-team Strike rate Across 20 overs"){
+    } else if (matchFunc == "Team-vs-team Strike rate across 20 overs"){
         teamSRAcrossOversOppnAllMatches(matchesDF,team,opposition,plot=plotOrTable1)
-    } else if (matchFunc == "Team-vs-team Wickets Across 20 overs"){
+    } else if (matchFunc == "Team-vs-team Wickets across 20 overs"){
         teamWicketsAcrossOversOppnAllMatches(matchesDF,team,opposition,plot=plotOrTable1)
-    } else if (matchFunc == "Team-vs-team ER Across 20 overs"){
+    } else if (matchFunc == "Team-vs-team ER across 20 overs"){
         teamERAcrossOversOppnAllMatches(matchesDF,team,opposition,plot=plotOrTable1)
+    } else if (matchFunc == "Top Runs batsmen across 20 overs"){
+        topRunsBatsmenAcrossOversAllOppnAllMatches(matchesDF,team)
+    } else if (matchFunc == "Top Strike rate batsmen across 20 overs"){
+        topSRBatsmenAcrossOversAllOppnAllMatches(matchesDF,team)
+    } else if (matchFunc == "Top Wickets bowlers across 20 overs"){
+        topWicketsBowlerAcrossOversOppnAllMatches(matchesDF,team)
+    } else if (matchFunc == "Top Economy rate bowlers across 20 overs"){
+        topERBowlerAcrossOversAllOppnAllMatches(matchesDF,team)
     } else if (matchFunc == "Win Loss Head-to-head All Matches"){
        plotWinLossBetweenTeams(team,opposition,dir1,dateRange, plot=plotOrTable1)
     }
