@@ -9,7 +9,7 @@
 
 #########################################################################################################
 #tar cvf gpp2021-4.tar bbl cpl ipl ntb odi ssm t20 wbb psl
-system("tar -xf ./gpp2021-.9tar")
+system("tar -xf ./gpp2021-9.tar")
 
 load("./ipl/iplBattingBowlingDetails/IPLBatsmen.RData")
 IPLBatsmen <-iplBatsmen
