@@ -9,7 +9,7 @@
 #########################################################################################################
 #Analyze all IPL matches between 2 IPL teams
 analyzeMatches2Teams <- function(match2,matchFunc,plotOrTable1,repType, team,opposition,t20type,dateRange) {
-
+    isT20=TRUE
 
     # Check and get the team indices of IPL teams in which the bowler has played
     print("Entering matches 2 analyze..........")
@@ -64,6 +64,7 @@ analyzeMatches2Teams <- function(match2,matchFunc,plotOrTable1,repType, team,opp
         matchesDF <- matches
 
     } else if (t20type == "ODIM"){
+        isT20=FALSE
         dir1="./odi/odiMatches2Teams"
         ODIMmatch <- paste("./odi/odiMatches2Teams/", match2,".RData",sep="")
         cat("ODIM2=",getwd(),"\n")
@@ -71,6 +72,7 @@ analyzeMatches2Teams <- function(match2,matchFunc,plotOrTable1,repType, team,opp
         matchesDF <- matches
 
     } else if (t20type == "ODIW"){
+        isT20=FALSE
         dir1="./odi/odiWomenMatches2Teams"
         ODIWmatch <- paste("./odi/odiWomenMatches2Teams/", match2,".RData",sep="")
         cat("ODIW2=",getwd(),"\n")
@@ -143,21 +145,21 @@ analyzeMatches2Teams <- function(match2,matchFunc,plotOrTable1,repType, team,opp
         teamBowlersWicketKindOppnAllMatches(matchesDF,team,opposition,plot=plotOrTable1)
     } else if (matchFunc == "Team Bowler Wicket Runs All Matches"){
         teamBowlersWicketRunsOppnAllMatches(matchesDF,team,opposition,plot=plotOrTable1)
-    } else if (matchFunc == "Team-vs-team Runs across 20 overs"){
+    } else if (matchFunc == "Team-vs-team Runs across 20 overs" && isT20){
         teamRunsAcrossOversOppnAllMatches(matchesDF,team,opposition,plot=plotOrTable1)
-    } else if (matchFunc == "Team-vs-team Strike rate across 20 overs"){
+    } else if (matchFunc == "Team-vs-team Strike rate across 20 overs" && isT20){
         teamSRAcrossOversOppnAllMatches(matchesDF,team,opposition,plot=plotOrTable1)
-    } else if (matchFunc == "Team-vs-team Wickets across 20 overs"){
+    } else if (matchFunc == "Team-vs-team Wickets across 20 overs" && isT20){
         teamWicketsAcrossOversOppnAllMatches(matchesDF,team,opposition,plot=plotOrTable1)
-    } else if (matchFunc == "Team-vs-team ER across 20 overs"){
+    } else if (matchFunc == "Team-vs-team ER across 20 overs" && isT20){
         teamERAcrossOversOppnAllMatches(matchesDF,team,opposition,plot=plotOrTable1)
-    } else if (matchFunc == "Top Runs batsmen across 20 overs"){
+    } else if (matchFunc == "Top Runs batsmen across 20 overs" && isT20){
         topRunsBatsmenAcrossOversAllOppnAllMatches(matchesDF,team)
-    } else if (matchFunc == "Top Strike rate batsmen across 20 overs"){
+    } else if (matchFunc == "Top Strike rate batsmen across 20 overs" && isT20){
         topSRBatsmenAcrossOversAllOppnAllMatches(matchesDF,team)
-    } else if (matchFunc == "Top Wickets bowlers across 20 overs"){
+    } else if (matchFunc == "Top Wickets bowlers across 20 overs" && isT20){
         topWicketsBowlerAcrossOversOppnAllMatches(matchesDF,team)
-    } else if (matchFunc == "Top Economy rate bowlers across 20 overs"){
+    } else if (matchFunc == "Top Economy rate bowlers across 20 overs" && isT20){
         topERBowlerAcrossOversAllOppnAllMatches(matchesDF,team)
     } else if (matchFunc == "Win Loss Head-to-head All Matches"){
        plotWinLossBetweenTeams(team,opposition,dir1,dateRange, plot=plotOrTable1)

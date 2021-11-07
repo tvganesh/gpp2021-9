@@ -10,6 +10,7 @@
 #Analyze an IPL match
 analyzeMatches <- function(match,matchFunc,plotOrTable,team,opposition,t20type) {
     cat("Entering analyze match=",match,"team=",team)
+    isT20=TRUE
 
     cat("match=",match,"func=",matchFunc,"plotOrtbl=",plotOrTable,"team=",team,"oppn=",opposition,"\n")
     # Check and get the team indices of IPL teams in which the bowler has played
@@ -56,12 +57,14 @@ analyzeMatches <- function(match,matchFunc,plotOrTable,team,opposition,t20type) 
         matchDF <- overs
 
     } else if (t20type == "ODIM"){
+        isT20=FALSE
         ODIMmatch <- paste("./odi/odiMenMatches/", match,".RData",sep="")
         cat("analymatchmen ODIM=",getwd())
         load(ODIMmatch)
         matchDF <- overs
 
     } else if (t20type == "ODIW"){
+        isT20=FALSE
         ODIWmatch <- paste("./odi/odiWomenMatches/", match,".RData",sep="")
         cat("analymatchmen ODIW=",getwd())
         load(ODIWmatch)
@@ -109,13 +112,13 @@ analyzeMatches <- function(match,matchFunc,plotOrTable,team,opposition,t20type) 
         matchWormGraph(matchDF,team,opposition,plot=plotOrTable)
     }  else if (matchFunc ==  "Match Worm Wicket Graph"){
         matchWormWicketGraph(matchDF,team,opposition,plot=plotOrTable)
-    }  else if (matchFunc == "Team Runs Across 20 overs"){
+    }  else if (matchFunc == "Team Runs Across 20 overs" && isT20){
         teamRunsAcrossOvers(matchDF,team,opposition,plot=plotOrTable)
-    }  else if (matchFunc == "Team Strike rate Across 20 overs"){
+    }  else if (matchFunc == "Team Strike rate Across 20 overs" && isT20){
         teamSRAcrossOvers(matchDF,team,opposition,plot=plotOrTable)
-    }  else if (matchFunc == "Team Wickets Across 20 overs"){
+    }  else if (matchFunc == "Team Wickets Across 20 overs" && isT20){
         teamWicketsAcrossOvers(matchDF,team,opposition,plot=plotOrTable)
-    } else if (matchFunc == "Team ER Across 20 overs"){
+    } else if (matchFunc == "Team ER Across 20 overs" && isT20){
         teamERAcrossOvers(matchDF,team,opposition,plot=plotOrTable)
     }
 
